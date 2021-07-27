@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import '../sass/variables.scss';
+
+*{
+  box-sizing: border-box;
+} 
+
+body{
+  background-color: $primary-color;
+  font-family: 'Montserrat', sans-serif;
+  margin: 1rem;
+}
+
+header{
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: $primary-color;
+}
+
+.search{
+  background-color: transparent;
+  border: 2px solid $secondary-color;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  color: rgb(7, 6, 6);
+  font-family: inherit;
+}

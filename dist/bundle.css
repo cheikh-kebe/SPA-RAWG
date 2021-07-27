@@ -1,0 +1,37 @@
+/*!************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[6].use[3]!./src/sass/style.scss ***!
+  \************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[6].use[3]!./src/sass/style.scss (1) ***!
+  \****************************************************************************************************************************************************************************************/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #6288f0;
+  font-family: "Montserrat", sans-serif;
+  margin: 1rem;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #6288f0;
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  color: #070606;
+  font-family: inherit;
+}
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[6].use[3]!./src/sass/variables.scss ***!
+  \****************************************************************************************************************************************************************************************/
+
