@@ -1,5 +1,9 @@
-import '../sass/style.scss';
+import anime from 'animejs';
 import '../sass/variables.scss';
+import '../sass/body.scss';
+import '../sass/header.scss';
+import '../sass/main.scss';
+import '../sass/section.scss';
 
 import { routes } from '../js/routes'
 console.log(process.env.RAWG_API)
@@ -17,3 +21,11 @@ const setRoute = () => {
 
 window.addEventListener("hashchange", () => setRoute());
 window.addEventListener("DOMContentLoaded", () => setRoute());
+
+
+anime({
+  targets: '.titles h1',
+  translateX: 250,
+  easing: 'easeInOutQuad'
+});
+

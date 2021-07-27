@@ -13,14 +13,15 @@ const PageDetail = (argument = "") => {
       fetch(`${finalURL}`)
         .then((response) => response.json())
         .then((response) => {
-          let { name, released, description } = response;
+          let { name, released, description, background_image} = response;
 
           let articleDOM = document.querySelector(".page-detail .article");
 
           articleDOM.querySelector("h1.title").innerHTML = name;
           articleDOM.querySelector("p.release-date span").innerHTML = released;
-          articleDOM.querySelector("p.description").innerHTML = description;
-          articleDOM.querySelector("img.image").innerHTML = background_image;
+          articleDOM.querySelector(".descriptions").innerHTML = description;
+          articleDOM.querySelector("img").src = background_image;
+          
         });
     };
 
@@ -32,9 +33,13 @@ const PageDetail = (argument = "") => {
       <section class="page-detail">
         <div class="article">
           <h1 class="title"></h1>
-          <img src="image">
+          <img src="">
           <p class="release-date">Release date : <span></span></p>
-          <p class="description"></p>
+
+          <div class="descriptions">
+            <p> </p>
+          </div>
+
         </div>
       </section>
     `;

@@ -19,7 +19,10 @@ const PageList = (argument = "") => {
                   <div class="cardGame">
                     <h1>${article.name}</h1>
                     <h2>${article.released}</h2>
-                    <a href = "#pagedetail/${article.slug}">${article.slug}</a>
+                    <div class="links">
+                      <a href = "#pagedetail/${article.slug}">${article.slug}</a>
+                    </div>
+                   
                   </div>
                 `;
           });
