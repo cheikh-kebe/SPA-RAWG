@@ -1,6 +1,6 @@
 const apiKey = process.env.RAWG_API
+
 const PageList = (argument = "") => {
-  console.log("Page List", argument);
   const preparePage = () => {
     const cleanedArgument = argument.replace(/\s+/g, "-");
     let articles = "";
@@ -14,15 +14,19 @@ const PageList = (argument = "") => {
       fetch(`${finalURL}`)
         .then((response) => response.json())
         .then((response) => {
+          console.log(response)
           response.results.forEach((article) => {
             articles += `
                   <div class="cardGame">
                     <h1>${article.name}</h1>
-                    <h2>${article.released}</h2>
-                    <div class="links">
-                      <a href = "#pagedetail/${article.slug}">${article.slug}</a>
+                    <img src="${article.background_image}" alt="game image">
+                    
+                    <div class="overview">
+                      <h3>${article.name}</h3>
+                      <h1>${article.released}</h1>
+                      <p>Rating: ${article.metacritic}</p>
+                        <a href = "#pagedetail/${article.slug}">${article.slug}</a>
                     </div>
-                   
                   </div>
                 `;
           });

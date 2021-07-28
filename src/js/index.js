@@ -19,13 +19,18 @@ const setRoute = () => {
   return true;
 };
 
+const searchGame = () => {
+  const input = document.getElementById('search');
+  input.addEventListener('keydown', function() {          
+    if (event.keyCode == 13) {
+        let gameToSearch = input.value
+        gameToSearch = gameToSearch.replace(/\s+/g, "-")
+        window.location.href = `#pagelist/${gameToSearch}`;
+      }          
+  });
+};
+searchGame();
+
 window.addEventListener("hashchange", () => setRoute());
 window.addEventListener("DOMContentLoaded", () => setRoute());
-
-
-anime({
-  targets: '.titles h1',
-  translateX: 250,
-  easing: 'easeInOutQuad'
-});
 

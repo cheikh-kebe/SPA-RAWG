@@ -1,1 +1,42 @@
 @import '../sass/variables.scss';
+
+.article h1{
+  font-size: 3rem;
+}
+.article p{
+  color: $third-color;
+}
+.article img{
+  width: 70%;
+}
+
+.image{
+  display: flex;
+  justify-content: center;
+  transition: ease-out;
+}
+
+.descriptions p{
+  width: 100rem;
+  font-size: 1.5rem;
+  margin: 2rem;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.release{
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.btn{
+  width: 20rem;
+  height: 5rem;
+  color: $primary-color;
+  font-size: 1.5rem;
+  background-color: aquamarine;
+  border-radius: 10px;
+}
