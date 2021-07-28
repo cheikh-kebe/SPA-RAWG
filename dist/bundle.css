@@ -19,9 +19,15 @@ body {
   margin: 1rem;
 }
 
-h1 {
+.titles {
   color: #E8EEF2;
   font-size: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.article h1 {
+  color: #E8EEF2;
 }
 /*!*************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[6].use[3]!./src/sass/header.scss ***!
@@ -45,13 +51,35 @@ header {
 /*!***********************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[6].use[3]!./src/sass/main.scss ***!
   \***********************************************************************************************************************************************************************************/
-.titles {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .title h1 {
   font-size: 1.5rem;
+}
+
+a, a:visited {
+  font-size: 3rem;
+  text-decoration: none;
+  position: relative;
+  color: #d6c9c9;
+}
+a:after, a:visited:after {
+  content: "";
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  background: #d6c9c9;
+  transition: 0.2s;
+}
+a:hover:after, a:visited:hover:after {
+  width: 100%;
+}
+a.block, a:visited.block {
+  display: block;
+  padding: 0.5em;
+}
+a.block:hover, a:visited.block:hover {
+  background: #eee;
 }
 
 .articles {
@@ -72,7 +100,8 @@ header {
 
 .cardGame a {
   text-decoration: none;
-  font-size: larger;
+  font-size: 1.5rem;
+  color: #37393a;
 }
 
 .cardGame img {
@@ -104,10 +133,38 @@ header {
 
 .overview p {
   color: #2c66b1;
+  font-weight: bolder;
 }
 
 .cardGame:hover .overview {
   transform: translateY(0);
+}
+
+button, button:visited {
+  font-size: 3rem;
+  text-decoration: none;
+  position: relative;
+  color: #d6c9c9;
+}
+button:after, button:visited:after {
+  content: "";
+  height: 30%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  background: #d6c9c9;
+  transition: 0.2s;
+}
+button:hover:after, button:visited:hover:after {
+  width: 100%;
+}
+button.block, button:visited.block {
+  display: block;
+  padding: 0.5em;
+}
+button.block:hover, button:visited.block:hover {
+  background: #eee;
 }
 /*!**************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[6].use[3]!./src/sass/section.scss ***!
@@ -118,20 +175,21 @@ header {
 
 .article p {
   color: #d6c9c9;
+  font-size: 1rem;
 }
 
 .article img {
-  width: 70%;
+  width: 60%;
 }
 
 .image {
   display: flex;
   justify-content: center;
-  transition: ease-out;
 }
 
 .descriptions p {
-  width: 100rem;
+  display: flex;
+  width: 80%;
   font-size: 1.5rem;
   margin: 2rem;
   background-color: #37393a;
@@ -144,6 +202,11 @@ header {
   justify-content: space-around;
   font-size: 2rem;
   font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.release p {
+  font-size: 1.5rem;
 }
 
 .btn {

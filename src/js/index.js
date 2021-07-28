@@ -1,12 +1,12 @@
-import anime from 'animejs';
-import '../sass/variables.scss';
-import '../sass/body.scss';
-import '../sass/header.scss';
-import '../sass/main.scss';
-import '../sass/section.scss';
+import anime from "animejs";
+import "../sass/variables.scss";
+import "../sass/body.scss";
+import "../sass/header.scss";
+import "../sass/main.scss";
+import "../sass/section.scss";
 
-import { routes } from '../js/routes'
-console.log(process.env.RAWG_API)
+import { routes } from "../js/routes";
+console.log(process.env.RAWG_API);
 
 let pageArgument;
 
@@ -20,13 +20,13 @@ const setRoute = () => {
 };
 
 const searchGame = () => {
-  const input = document.getElementById('search');
-  input.addEventListener('keydown', function() {          
+  const input = document.getElementById("search");
+  input.addEventListener("keydown", function () {
     if (event.keyCode == 13) {
-        let gameToSearch = input.value
-        gameToSearch = gameToSearch.replace(/\s+/g, "-")
-        window.location.href = `#pagelist/${gameToSearch}`;
-      }          
+      let gameToSearch = input.value;
+      gameToSearch = gameToSearch.replace(/\s+/g, "-");
+      window.location.href = `#pagelist/${gameToSearch}`;
+    }
   });
 };
 searchGame();

@@ -10,9 +10,13 @@ body{
   font-family: 'Montserrat', sans-serif;
   margin: 1rem;
 }
-h1{
+
+.titles{
   color: $secondary-color;
   font-size: 2rem;
+  display: flex;
+  justify-content: space-around;
 }
-
-
+.article h1{
+  color: $secondary-color;
+}

@@ -35,6 +35,8 @@ const PageDetail = (argument = "") => {
     fetchGame(`https://api.rawg.io/api/games/`, cleanedArgument);
   };
 
+  
+
   const render = () => {
     pageContent.innerHTML = `
       <section class="page-detail">
@@ -45,6 +47,9 @@ const PageDetail = (argument = "") => {
           </div>
           <div class="release">
             <p class="release-date"></p>
+          </div>
+          <div class="descriptions">
+            <p></p>
           </div>
           <div class="developers">
             <p class="devs"> </p>
@@ -73,9 +78,7 @@ const PageDetail = (argument = "") => {
           <div class="Buy">
             <button class="btn" name="button" href="#">Buy</button>
           </div>
-          <div class="descriptions">
-            <p></p>
-          </div>
+          
         </div>
       </section>
     `;

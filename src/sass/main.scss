@@ -1,13 +1,39 @@
 @import '../sass/variables.scss';
 
 
-.titles{
-  display: flex;
-  justify-content: flex-end;
-}
-
 .title h1{
   font-size: 1.5rem;
+}
+
+a, a:visited {
+  font-size: 3rem;
+	text-decoration: none;
+	position: relative;
+	color: $third-color;
+	
+	&:after {
+		content: '';
+		height: 3px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		background: $third-color;
+		transition: 0.2s;
+	}
+
+	&:hover:after {
+		width: 100%;
+	}
+	
+	&.block {
+		display: block;
+		padding: 0.5em;
+		
+		&:hover {
+			background: #eee;
+		}
+	}
 }
 .articles{
   display: flex;
@@ -26,7 +52,8 @@
 
 .cardGame a{
   text-decoration: none;
-  font-size: larger;
+  font-size: 1.5rem;
+  color: $primary-color;
 }
 
 .cardGame img{
@@ -56,9 +83,41 @@
 }
 .overview p{
   color: rgb(44, 102, 177);
+  font-weight: bolder;
 }
 
 .cardGame:hover .overview{
   transform: translateY(0);
+}
+
+button, button:visited {
+  font-size: 3rem;
+	text-decoration: none;
+	position: relative;
+	color: $third-color;
+	
+	&:after {
+		content: '';
+		height: 30%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		background: $third-color;
+		transition: 0.2s;
+	}
+
+	&:hover:after {
+		width: 100%;
+	}
+	
+	&.block {
+		display: block;
+		padding: 0.5em;
+		
+		&:hover {
+			background: #eee;
+		}
+	}
 }
 
