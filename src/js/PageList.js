@@ -17,24 +17,28 @@ const PageList = (argument = "") => {
           console.log(response)
           response.results.forEach((article) => {
             articles += `
-                  <div class="cardGame">
-                    <h1>${article.name}</h1>
-                    <img src="${article.background_image}" alt="game image">
-                    
-                    <div class="overview">
-                      <h3>${article.name}</h3>
-                      <h1>${article.released}</h1>
-                      <p>Rating: ${article.metacritic}</p>
-                        <a href = "#pagedetail/${article.slug}">${article.slug}</a>
-                    </div>
-                  </div>
-                `;
+              <div class="cardGame">
+                <img src="${article.background_image}" alt="game image">
+                <h1>${article.name}</h1>
+                
+                <div class="overview">
+                  <h3>${article.name}</h3>
+                  <h1>${article.released}</h1>
+                  <p>Rating: ${article.metacritic}</p>
+                    <a href = "#pagedetail/${article.slug}">${article.slug}</a>
+                </div>
+              </div>
+            `;
           });
           document.querySelector(".page-list .articles").innerHTML = articles;
+
         });
+        let nextPage = 
+        fetch
     };
 
     fetchList(`https://api.rawg.io/api/games?key=${apiKey}`, cleanedArgument);
+
   };
 
   const render = () => {

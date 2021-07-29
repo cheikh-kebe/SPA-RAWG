@@ -1,24 +1,20 @@
 @import '../sass/variables.scss';
 
 
-.title h1{
-  font-size: 1.5rem;
-}
-
 a, a:visited {
   font-size: 3rem;
 	text-decoration: none;
 	position: relative;
-	color: $third-color;
+	
 	
 	&:after {
 		content: '';
-		height: 3px;
+		height: 5px;
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		width: 0%;
-		background: $third-color;
+		background-color: $red;
 		transition: 0.2s;
 	}
 
@@ -44,16 +40,20 @@ a, a:visited {
   border-radius: 8px;
   width: 30rem;
   margin: 1rem;
-  color: $third-color;
   border-radius: 8px;
   position: relative;
   overflow: hidden;
 }
 
+.cardGame h1{
+	color: $white;
+}
+
 .cardGame a{
   text-decoration: none;
+	color: $red;
   font-size: 1.5rem;
-  color: $primary-color;
+	font-weight: bolder;
 }
 
 .cardGame img{
@@ -74,12 +74,14 @@ a, a:visited {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $third-color;
-  color: $primary-color;
   padding: 1rem;
   max-height: 100%;
   transform: translateY(100%);
   transition: transform 0.5s ease-in;
+	background-color: $white;
+}
+.overview h1{
+	color: $black;
 }
 .overview p{
   color: rgb(44, 102, 177);
@@ -89,35 +91,3 @@ a, a:visited {
 .cardGame:hover .overview{
   transform: translateY(0);
 }
-
-button, button:visited {
-  font-size: 3rem;
-	text-decoration: none;
-	position: relative;
-	color: $third-color;
-	
-	&:after {
-		content: '';
-		height: 30%;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 0%;
-		background: $third-color;
-		transition: 0.2s;
-	}
-
-	&:hover:after {
-		width: 100%;
-	}
-	
-	&.block {
-		display: block;
-		padding: 0.5em;
-		
-		&:hover {
-			background: #eee;
-		}
-	}
-}
-
