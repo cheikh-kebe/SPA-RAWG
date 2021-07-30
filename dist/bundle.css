@@ -197,14 +197,6 @@ a.block:hover, a:visited.block:hover {
   color: white;
 }
 
-.btn {
-  width: 20rem;
-  height: 5rem;
-  font-size: 1.5rem;
-  background-color: #c12530;
-  border-radius: 10px;
-}
-
 .game-info {
   display: grid;
   grid-template-columns: 4fr 1fr;
@@ -272,4 +264,11 @@ a.block:hover, a:visited.block:hover {
 .section span {
   font-size: 1.5rem;
   color: white;
+}
+.section .platform {
+  font-size: 1.5rem;
+  color: white;
+}
+.section .btn {
+  font-size: 2rem;
 }

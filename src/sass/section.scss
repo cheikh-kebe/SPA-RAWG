@@ -51,14 +51,6 @@
   font-size: 1.5rem;
   color: $white;
 }
-.btn{
-  width: 20rem;
-  height: 5rem;
-
-  font-size: 1.5rem;
-  background-color: $red;
-  border-radius: 10px;
-}
 
 .game-info {
   display: grid;
@@ -128,6 +120,13 @@
   span{
     font-size: 1.5rem;
     color: $white;
+  }
+  .platform{
+    font-size: 1.5rem;
+    color: $white;
+  }
+  .btn{
+    font-size: 2rem;
   }
   
 }

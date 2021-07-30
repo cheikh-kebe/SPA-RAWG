@@ -10,6 +10,7 @@ const PageDetail = (argument = "") => {
     const fetchGame = (url, argument) => {
 
       let finalURL = url + argument + apiKey;
+      console.log(finalURL)
 
       fetch(`${finalURL}`)
         .then((response) => response.json())
@@ -30,6 +31,7 @@ const PageDetail = (argument = "") => {
           articleDOM.querySelector("p.tags").innerHTML = `Tags: ${tags.map(x => x.slug)}`;
           articleDOM.querySelector("p.genre").innerHTML = `Genre: ${genres.map(x => x.name)}`;
           articleDOM.querySelector("p.editor").innerHTML = `Publishers: ${publishers.map(x => x.name)}`;
+          articleDOM.querySelector(".btn").setAttribute('href', `${website}`);
 
           let screenShotUrl = url + response.slug + "/screenshots" + apiKey;
           console.log(screenShotUrl)
@@ -100,7 +102,7 @@ const PageDetail = (argument = "") => {
             </div>
           </div>
           <div class="Buy">
-            <button class="btn" name="button" href="#">Buy</button>
+            <a class="btn" href="">Buy</a>
           </div>
           <div class="section">
             <h1 class="title">screenshots</h1>
